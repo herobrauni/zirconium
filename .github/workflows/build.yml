@@ -86,7 +86,7 @@ jobs:
       - name: Build image
         id: build
         run: |
-          sudo podman build --build-args BASE_IMAGE=${{matrix.BASE_IMAGE}} -t "${{ env.IMAGE_NAME }}${{ matrix.VARIANT }}:${{env.DEFAULT_TAG}}" -f ./Containerfile .
+          sudo podman build --build-arg BASE_IMAGE=${{matrix.BASE_IMAGE}} -t "${{ env.IMAGE_NAME }}${{ matrix.VARIANT }}:${{env.DEFAULT_TAG}}" -f ./Containerfile .
 
       - name: Run Rechunker
         id: rechunk
