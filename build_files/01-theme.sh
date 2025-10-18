@@ -4,18 +4,18 @@ set -xeuo pipefail
 
 install -d /usr/share/zirconium/
 
-dnf -y copr enable yalter/niri
-dnf -y copr disable yalter/niri
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri install niri
+dnf -y copr enable yalter/niri-git
+dnf -y copr disable yalter/niri-git
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
 rm -rf /usr/share/doc/niri
 
-dnf -y copr enable errornointernet/quickshell
-dnf -y copr disable errornointernet/quickshell
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell
+dnf -y copr enable avengemedia/danklinux
+dnf -y copr disable avengemedia/danklinux
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:avengemedia:danklinux install quickshell-git ghostty  cliphist dgop  matugen
 
-dnf -y copr enable scottames/ghostty
-dnf -y copr disable scottames/ghostty
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:scottames:ghostty install ghostty
+dnf -y copr enable che/nerd-fonts
+dnf -y copr disable che/nerd-fonts
+dnf -y --enablerepo copr:copr.fedorainfracloud.org:che:nerd-fonts install nerd-fonts
 
 # # Extracts colors from wallpapers
 # # TODO: also include cliphist :)
@@ -24,7 +24,6 @@ dnf -y --enablerepo copr:copr.fedorainfracloud.org:scottames:ghostty install gho
 # dnf -y copr disable purian23/matugen
 # dnf -y --enablerepo copr:copr.fedorainfracloud.org:puritan23/matugen install matugen
 
-dnf -y remove alacritty
 dnf -y install \
     brightnessctl \
     chezmoi \
@@ -38,6 +37,7 @@ dnf -y install \
     greetd \
     greetd-selinux \
     just \
+    kitty \
     nautilus \
     orca \
     pipewire \
