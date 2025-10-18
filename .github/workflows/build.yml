@@ -32,9 +32,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - BASE_IMAGE: ghcr.io/ublue-os/base-main:latest
+          - BASE_IMAGE: ghcr.io/ublue-os/base-main:43
             VARIANT: ""
-          - BASE_IMAGE: ghcr.io/ublue-os/base-nvidia:latest
+          - BASE_IMAGE: ghcr.io/ublue-os/base-nvidia:43
             VARIANT: "-nvidia"
     permissions:
       contents: read
