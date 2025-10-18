@@ -1,9 +1,12 @@
+# Add a build arg with a sensible default so FROM can be dynamic
+ARG BASE_IMAGE=quay.io/fedora/fedora-bootc:43
+
 FROM scratch AS ctx
 
 COPY build_files /build
 COPY system_files /files
 
-FROM quay.io/fedora/fedora-bootc:43
+FROM ${BASE_IMAGE}
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/var \
