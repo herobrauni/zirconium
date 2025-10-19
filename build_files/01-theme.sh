@@ -109,7 +109,7 @@ systemctl preset --global swayidle
 systemctl preset --global udiskie
 systemctl preset --global xwayland-satellite
 
-git clone "https://github.com/noctalia-dev/noctalia-shell.git" /usr/share/zirconium/noctalia-shell
+git clone "https://github.com/herobrauni/noctalia-shell.git" /usr/share/zirconium/noctalia-shell
 cp /etc/skel/Pictures/Wallpapers/mountains.png /usr/share/zirconium/noctalia-shell/Assets/Wallpaper/noctalia.png
 git clone "https://github.com/zirconium-dev/zdots.git" /usr/share/zirconium/zdots
 install -d /etc/niri/
